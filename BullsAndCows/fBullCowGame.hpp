@@ -1,14 +1,30 @@
 //
-//  fBullCowGame.hpp
+//  FBullCowGame.hpp
 //  BullsAndCows
 //
 //  Created by asdf on 10/2/18.
 //  Copyright © 2018 asdf. All rights reserved.
 //
 
-#ifndef fBullCowGame_hpp
-#define fBullCowGame_hpp
+#ifndef FBullCowGame_hpp
+#define FBullCowGame_hpp
 
 #include <stdio.h>
 
-#endif /* fBullCowGame_hpp */
+#endif /* FBullCowGame_hpp */
+
+class FBullCowGame {
+public:
+    void Reset(); // TODO make a more rich return statement
+    int GetMaxTries();
+    int GetCurrentTry();
+    bool IsGameWon();
+    bool CheckGuessValidity(string);
+
+
+private:
+    int MyCurrentTry;
+    int MyMaxTries;
+    bool IsIsogram(string);
+
+};

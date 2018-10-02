@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CCB0A2F821640CB300EDB211 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCB0A2F721640CB300EDB211 /* main.cpp */; };
-		CCD7632621641FA60000C0F8 /* fBullCowGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCD7632421641FA60000C0F8 /* fBullCowGame.cpp */; };
+		CCD76329216423770000C0F8 /* FBullCowGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCD76327216423770000C0F8 /* FBullCowGame.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +26,8 @@
 /* Begin PBXFileReference section */
 		CCB0A2F421640CB300EDB211 /* BullsAndCows */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BullsAndCows; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCB0A2F721640CB300EDB211 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		CCD7632421641FA60000C0F8 /* fBullCowGame.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = fBullCowGame.cpp; sourceTree = "<group>"; };
-		CCD7632521641FA60000C0F8 /* fBullCowGame.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fBullCowGame.hpp; sourceTree = "<group>"; };
+		CCD76327216423770000C0F8 /* FBullCowGame.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FBullCowGame.cpp; sourceTree = "<group>"; };
+		CCD76328216423770000C0F8 /* FBullCowGame.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FBullCowGame.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				CCB0A2F721640CB300EDB211 /* main.cpp */,
-				CCD7632421641FA60000C0F8 /* fBullCowGame.cpp */,
-				CCD7632521641FA60000C0F8 /* fBullCowGame.hpp */,
+				CCD76327216423770000C0F8 /* FBullCowGame.cpp */,
+				CCD76328216423770000C0F8 /* FBullCowGame.hpp */,
 			);
 			path = BullsAndCows;
 			sourceTree = "<group>";
@@ -124,7 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCB0A2F821640CB300EDB211 /* main.cpp in Sources */,
-				CCD7632621641FA60000C0F8 /* fBullCowGame.cpp in Sources */,
+				CCD76329216423770000C0F8 /* FBullCowGame.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
