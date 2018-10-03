@@ -10,21 +10,22 @@
 #define FBullCowGame_hpp
 
 #include <stdio.h>
+#include <string>
 
 #endif /* FBullCowGame_hpp */
 
 class FBullCowGame {
 public:
     void Reset(); // TODO make a more rich return statement
-    int GetMaxTries();
-    int GetCurrentTry();
+    int GetMaxTries() const;
+    int GetCurrentTry() const;
     bool IsGameWon();
-    bool CheckGuessValidity(string);
+    bool CheckGuessValidity(std::string);
 
 
 private:
-    int MyCurrentTry;
-    int MyMaxTries;
-    bool IsIsogram(string);
+    int MyCurrentTry = 1;
+    int MyMaxTries = 5;
+    bool IsIsogram(std::string);
 
 };

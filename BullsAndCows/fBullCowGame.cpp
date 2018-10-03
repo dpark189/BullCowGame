@@ -7,3 +7,28 @@
 //
 
 #include "FBullCowGame.hpp"
+
+
+bool FBullCowGame::CheckGuessValidity(std::string) { 
+    return false;
+}
+
+
+bool FBullCowGame::IsGameWon() { 
+    return false;
+}
+
+
+int FBullCowGame::GetCurrentTry() const {
+    return MyCurrentTry;
+}
+
+
+void FBullCowGame::Reset() { 
+    return;
+}
+
+
+int FBullCowGame::GetMaxTries() const { 
+    return MyMaxTries;
+}
