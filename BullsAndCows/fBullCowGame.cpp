@@ -36,12 +36,10 @@ EGuessStatus FBullCowGame::CheckGuessValidity(FString Guess) const
     }
 };
 
+bool FBullCowGame::IsGameWon() const { return bGameIsWon; }
+
 int32 FBullCowGame::GetCurrentTry() const {
     return MyCurrentTry;
-}
-
-bool FBullCowGame::IsGameWon() const{
-    return false;
 }
 
 
@@ -55,7 +53,7 @@ void FBullCowGame::Reset() {
     
     const FString HIDDEN_WORD = "planet";
     MyHiddenWord = HIDDEN_WORD;
-    
+    bGameIsWon = false;
     MyCurrentTry = 1;
     return;
 }
@@ -65,6 +63,7 @@ int32 FBullCowGame::GetHiddenWordLength() const
     return MyHiddenWord.length();
 }
 
+
 FBullCowCount FBullCowGame::SubmitGuess(FString Guess) {
     // increment turn number
     MyCurrentTry++;
@@ -73,7 +72,7 @@ FBullCowCount FBullCowGame::SubmitGuess(FString Guess) {
     FBullCowCount BullCowCount;
     
     // loop through all letters in the guess
-    int32 Wordlength = MyHiddenWord.length(); //assuming guess and hidden are the same length
+    int32 Wordlength = MyHiddenWord.length();
     for (int32 MHWChar = 0; MHWChar < Wordlength; MHWChar++) {
         // compare letters against hidden word
         for (int32 GChar = 0; GChar < Wordlength; GChar++) {
@@ -86,6 +85,11 @@ FBullCowCount FBullCowGame::SubmitGuess(FString Guess) {
                 }
             }
         }
+    }
+    if ( BullCowCount.Bulls == Wordlength ) {
+        bGameIsWon = true;
+    } else {
+        bGameIsWon = false;
     }
     return BullCowCount;
 }

@@ -33,7 +33,7 @@ int main(int32 argc, const char * argv[]) {
 }
 
 void PrintIntro(){
-    std::cout << "Welcome to Bulls and Cows\n";
+    std::cout << "\n\nWelcome to Bulls and Cows\n";
     std::cout << "Can you guess the ";
     std::cout << BCGame.GetHiddenWordLength();
     std::cout << " letter word I'm thinking of?\n";
@@ -47,7 +47,7 @@ void PlayGame() {
     int32 MaxTries = BCGame.GetMaxTries();
     std::cout << MaxTries << std::endl;
     // loop for the number of turns asking for guesses
-    for (int32 i = 1; i <= MaxTries; i++){
+    while (!BCGame.IsGameWon() && BCGame.GetCurrentTry() <= MaxTries){
         FText Guess = GetValidGuess();
         
         // submit valid guess to the game and receive counts
@@ -87,6 +87,7 @@ FText GetValidGuess()
                 break;
         }
     } while (Status != EGuessStatus::OK); // keep looping until no errors
+
     return Guess;
 }
 
