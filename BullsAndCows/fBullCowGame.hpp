@@ -16,7 +16,7 @@ using FString = std::string;
 using int32 = int;
 
 // two integers intialised to 0
-struct BullCowCount
+struct FBullCowCount
 {
     int32 Bulls = 0;
     int32 Cows = 0;
@@ -31,11 +31,12 @@ public:
     void Reset(); // TODO make a more rich return statement
     int32 GetMaxTries() const;
     int32 GetCurrentTry() const;
+    int32 GetHiddenWordLength() const;
     bool IsGameWon() const;
     bool CheckGuessValidity(FString);
     
     //counts bulls & cows, and increases try # assuming valid guess
-    BullCowCount SubmitGuess(FString);
+    FBullCowCount SubmitGuess(FString);
 
 
 private:
@@ -44,5 +45,4 @@ private:
     int32 MyMaxTries;
     FString MyHiddenWord;
     bool IsIsogram(FString);
-
 };
